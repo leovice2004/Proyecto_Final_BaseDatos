@@ -60,6 +60,29 @@ El set de datos cuenta con al rededor de 12,800 tuplas y 22 atributos. Los atrib
 Como consideraciones éticas se debe tomar en cuenta la imagen de los jugadores de los cuales utilizaremos su información en el sentido de que no se debe hacer mal uso de esta información, así como no difamar o dañar la imagen de cualquiera de los jugadores, instituciones o países involucrados en la base de datos. El aspecto más importante de estas considerciones éticas es la repercución que pueden tener los resultados obtenidos respecto a la edad de los jugadores ya que estos resultados afectan a individuos. Por otro lado el citado correcto de fuentes de información y dar crédito a autores externos es fundamental.
 
 
+## Carga inicial set de datos
+
+Para cargar el set de datos de los jugadores de la NBA se deben realizar los siguientes pasos:
+
+1. Descargar el archivo CSV de los jugadores de la NBA.
+
+2. En la línea de comandos de psql se debe crear la base de datos.
+
+CREATE DATABASE jugadores; 
+
+3. Una vez creada la base de datos en la línea de comandos de psql, ésta se conecta al sistema de gestión de datos elegido (en este caso se utilizará PostgreSQL) para poder realizar el script del esquema de carga inicial del set de datos. En este esquema de carga inicial la creación de la tabla debe contener los tipos de atributos más permisivos, pues no hemos examinado a profundidad la base de datos. Como es la carga inicial también se creará un esquema “raw” que contenga los datos brutos. (Script de carga inicial y creación de tabla anexado en folder) 
+
+4. Una vez creado el esquema de carga inicial, se debe poblar la base de datos desde el archivo CSV. Para esto, se debe utilizar el comando \copy en la línea de comandos de psql. 
+
+\copy 
+raw.jugadores(id,nombre_jugador,abreviacion_equipo,edad,estatura,peso,universidad,pais_nacimiento,anio_drafteo,ronda_drafteo,pick_dentro_ronda,partidos_jugados_temporada,promedio_puntos,promedio_rebotes,promedio_asistencias,difpuntosx100_posesiones_en_cancha,porcentaje_rebotes_ofen_de_posibles,porcentaje_rebotes_defen_de_posibles,porcentaje_participacion_jugadas,eficiencia_tiro,porcentaje_asistencias,temporada) 
+
+FROM “ruta_a_archivo_CSV_descargado”
+
+WITH (FORMAT CSV, HEADER true, DELIMITER ',');
+
+
+Una vez que se ha poblado la base de datos, se pueden hacer consultas, modificaciones e inserciones.
 
 
 
