@@ -74,12 +74,12 @@ CREATE DATABASE jugadores;
 
 4. Una vez creado el esquema de carga inicial, se debe poblar la base de datos desde el archivo CSV. Para esto, se debe utilizar el comando \copy en la línea de comandos de psql. 
 
-\copy 
-raw.jugadores(id,nombre_jugador,abreviacion_equipo,edad,estatura,peso,universidad,pais_nacimiento,anio_drafteo,ronda_drafteo,pick_dentro_ronda,partidos_jugados_temporada,promedio_puntos,promedio_rebotes,promedio_asistencias,difpuntosx100_posesiones_en_cancha,porcentaje_rebotes_ofen_de_posibles,porcentaje_rebotes_defen_de_posibles,porcentaje_participacion_jugadas,eficiencia_tiro,porcentaje_asistencias,temporada) 
+\copy     
+`raw.jugadores(id,nombre_jugador,abreviacion_equipo,edad,estatura,peso,universidad,pais_nacimiento,anio_drafteo,ronda_drafteo,pick_dentro_ronda,partidos_jugados_temporada,promedio_puntos,promedio_rebotes,promedio_asistencias,difpuntosx100_posesiones_en_cancha,porcentaje_rebotes_ofen_de_posibles,porcentaje_rebotes_defen_de_posibles,porcentaje_participacion_jugadas,eficiencia_tiro,porcentaje_asistencias,temporada) 
 
 FROM “ruta_a_archivo_CSV_descargado”
 
-WITH (FORMAT CSV, HEADER true, DELIMITER ',');
+WITH (FORMAT CSV, HEADER true, DELIMITER ',');`
 
 
 Una vez que se ha poblado la base de datos, se pueden hacer consultas, modificaciones e inserciones.
