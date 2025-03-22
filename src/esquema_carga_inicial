@@ -1,0 +1,28 @@
+DROP SCHEMA IF EXISTS raw;
+CREATE SCHEMA IF NOT EXISTS raw;
+
+DROP TABLE IF EXISTS raw.jugadores;
+CREATE TABLE IF NOT EXISTS raw.jugadores (
+	id BIGINT,
+	nombre_jugador TEXT,
+	abreviacion_equipo TEXT,
+	edad DOUBLE PRECISION,
+	estatura DOUBLE PRECISION,
+	peso DOUBLE PRECISION,
+	universidad TEXT,
+	pais_nacimiento TEXT,
+	anio_drafteo TEXT,
+	ronda_drafteo TEXT,
+	pick_dentro_ronda TEXT,
+	partidos_jugados_temporada DOUBLE PRECISION,
+	promedio_puntos DOUBLE PRECISION,
+	promedio_rebotes DOUBLE PRECISION,
+	promedio_asistencias DOUBLE PRECISION,
+	difpuntosx100_posesiones_en_cancha DOUBLE PRECISION,
+	porcentaje_rebotes_ofen_de_posibles DOUBLE PRECISION,
+	porcentaje_rebotes_defen_de_posibles DOUBLE PRECISION,
+	porcentaje_participacion_jugadas DOUBLE PRECISION,
+	eficiencia_tiro DOUBLE PRECISION,
+	porcentaje_asistencias DOUBLE PRECISION, 
+	temporada TEXT
+);
