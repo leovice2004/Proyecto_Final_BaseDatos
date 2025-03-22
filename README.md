@@ -70,7 +70,7 @@ Para cargar el set de datos de los jugadores de la NBA se deben realizar los sig
 ```
 CREATE DATABASE jugadores; 
 ```
-3. Una vez creada la base de datos en la línea de comandos de psql, ésta se conecta al sistema de gestión de datos elegido (en este caso se utilizará PostgreSQL) para poder realizar el script del esquema de carga inicial del set de datos. En este esquema de carga inicial la creación de la tabla debe contener los tipos de atributos más permisivos, pues no hemos examinado a profundidad la base de datos. Como es la carga inicial también se creará un esquema “raw” que contenga los datos brutos. (Script de carga inicial y creación de tabla anexado en folder) 
+3. Una vez creada la base de datos en la línea de comandos de psql, ésta se conecta al sistema de gestión de datos elegido (en este caso se utilizará PostgreSQL) para poder realizar el script del esquema de carga inicial del set de datos. En este esquema de carga inicial la creación de la tabla debe contener los tipos de atributos más permisivos, pues no hemos examinado a profundidad la base de datos. Como es la carga inicial también se creará un esquema “raw” que contenga los datos brutos. (Script de carga inicial y creación de tabla anexado en folder "src"). 
 
 4. Una vez creado el esquema de carga inicial, se debe poblar la base de datos desde el archivo CSV. Para esto, se debe utilizar el comando "\copy" en la línea de comandos de psql. 
 
