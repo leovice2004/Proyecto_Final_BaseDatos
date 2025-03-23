@@ -93,13 +93,17 @@ En estos resultados se encontró que la columna de id es la única que tiene val
 
 En cuanto a la edad, estatura y peso de los jugadores, se encontró que las edades van desde los 18 años hasta los 44 años con un promedio de 27 años, las estaturas van desde 1.60m hasta 2.31m con promedio de 2m y los pesos van desde los 60 kg hasta los 163 kg con promedio de 100 kg.
 
+![Muggsy Bogues y Manute Bol](https://github.com/user-attachments/assets/9260571e-a91e-4872-8bed-991212c058b1)
+
 Por último en cuanto a los partidos jugados, promedio de puntos, promedio de asistencias y promedio de rebotes se obtuvo que el número de partidos jugados por temporada va desde 1 hasta 85 con promedio de 51 partidos, los promedios de puntos van desde 0 hasta 36.1 con promedio de 8 puntos por partido, el promedio de asistencias va desde 0 hasta 11.7 con promedio de 1 asistencia por partido y el promedio de rebotes va desde 0 hasta 16 con promedio de 3 rebotes por partido. 
 
 En cuanto a los valores nulos, se encontró que el set de datos cuenta con valores nulos en las columnas de año drafteo, ronda drafteo y pick drafteo, pero en lugar de ser valores nulos, se insertó el valor “Undrafted”. Además, en cuanto a el conteo de valores nulos, se puede observar que varía con el tiempo, ya que algunos jugadores dejan de tener presencia en los datos por su retiro y otros más empiezan a aparecer, lo que hace que estos valores nulos varíen. 
 
 En cuanto a inconsistencias del set de datos, se encontró que en la columna de eficiencia de tiro el rango no va de 0 a 1 (con 1 como el 100% de eficiencia de tiro), sino que va desde 0 hasta 1.5, donde se rompe toda lógica de eficiencia. 
 
-Por último, es importante notar que en la columna nombre_jugador los nombres de los jugadores se van repitiendo y pueden ser insertados nuevos, pues los jugadores se van retirando o van debutando y continúan en la NBA durante varios años y sus estadísticas son almacenadas en cada una de las temporadas. 
+Por último, es importante notar que en la columna nombre_jugador los nombres de los jugadores se van repitiendo y pueden ser insertados nuevos, pues los jugadores se van retirando o van debutando y continúan en la NBA durante varios años y sus estadísticas son almacenadas en cada una de las temporadas desde 1996 hasta 2022.
+
+¡¡Todos los scripts de expolarción se encuentran en la carpeta src!!
 
 
 
