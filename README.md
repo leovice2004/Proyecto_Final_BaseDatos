@@ -85,7 +85,7 @@ WITH (FORMAT CSV, HEADER true, DELIMITER ',');
 
 Una vez que se ha poblado la base de datos, se pueden hacer consultas, modificaciones e inserciones.
 
-##Análisis exploratorio
+## Análisis exploratorio
 
 En el análisis exploratorio de los datos se buscaron las columnas con valores únicos, mínimos y máximos de fechas, mínimos, máximos y promedios de valores numéricos, conteo de valores nulos y las inconsistencias del set de datos.
 
