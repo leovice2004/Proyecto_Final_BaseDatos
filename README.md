@@ -86,7 +86,7 @@ WITH (FORMAT CSV, HEADER true, DELIMITER ',');
 Una vez que se ha poblado la base de datos, se pueden hacer consultas, modificaciones e inserciones.
 
 ## Análisis exploratorio
-
+[Ver script de análisis exploratorio](https://github.com/leovice2004/Proyecto_Final_BaseDatos/blob/41f34abb1aaf4ab8fab1dd17991c38fe8e695719/src/analisis_exploratorio.sql)
 En el análisis exploratorio de los datos se buscaron las columnas con valores únicos, mínimos y máximos de fechas, mínimos, máximos y promedios de valores numéricos, conteo de valores nulos y las inconsistencias del set de datos.
 
 En estos resultados se encontró que la columna de id es la única que tiene valores únicos, es por eso que se puede categorizar como llave primaria de este set de datos. Por otro lado, las fechas de drafteo  de los jugadores van desde el año 1963 hasta el año 2022 y se tiene información de estos jugadores desde la temporada 1996-97 hasta la temporada 2022-23. 
