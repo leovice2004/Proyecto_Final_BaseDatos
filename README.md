@@ -105,6 +105,50 @@ Por último, es importante notar que en la columna nombre_jugador los nombres de
 
 ¡¡Todos los scripts de expolarción se encuentran en la carpeta src!!
 
+## Limpieza
+Para la limpieza se creó un nuevo esquema llamado limpieza:
+```
+DROP SCHEMA IF EXISTS limpieza;
+CREATE SCHEMA IF NOT EXISTS limpieza;
+```
+Después de crear el esquema de limpieza, se crea una nueva tabla dentra de ese esquema agregando algunas restricciones a los atributos de lo que se pudo deducir de las exploraciones, en este caso se cambiaron algunos tipos de atributos a tipos más restrictivos:
+
+| Atributo | Se cambió a: | Razón: |
+| ------------- | -------------|-----------|
+| id | Primary Key  | Se observaron valores únicos |
+| nombre_jugador  | varchar(100)  | Strings no son de gran longitud |
+| abreviacion_equipo  | varchar(100)  | Strings no son de gran longitud |
+| edad | smallint  | Es de tipo entero y valores menores a 50|
+| estatura  | real  | Es de tipo decimal |
+| peso | real | Es de tipo decimal |
+| universidad  | varchar(100)  | Strings no son de gran longitud |
+| pais_nacimiento  | varchar(100)  | Strings no son de gran longitud |
+| anio_drafteo  | varchar(100)  | Strings no son de gran longitud y hay valores tipo texto ‘Undrafted’|
+| ronda_drafteo | varchar(100)  | Strings no son de gran longitud y hay valores tipo texto ‘Undrafted’|
+| pick_dentro_de_ronda | varchar(100)  | Strings no son de gran longitud y hay valores tipo texto ‘Undrafted’|
+| partidos_jugados_temporada  | smallint | Es de tipo entero y valores menores a 85|
+| promedio_puntos  | real | Es de tipo decimal |
+| promedio_rebotes  | real  | Es de tipo decimal |
+| promedio_asistencias  | real  | Es de tipo decimal |
+| difpuntosx100_posesiones_en_cancha  | real  | Es de tipo decimal |
+| porcentaje_rebotes_ofen_de_posibles | real  | Es de tipo decimal |
+| porcentaje_rebotes_defen_de_posibles  | real  | Es de tipo decimal |
+| porcentaje_participacion_jugadas  | real  | Es de tipo decimal |
+| eficiencia_tiro  | real  | Es de tipo decimal |
+| porcentaje_asistencias | real  | Es de tipo decimal |
+| temporada  | varchar(100) | Strings no son de gran longitud y deben ser texto pues es de tipo 19**-**|
+
+También se agregaron restricciones NOT NULL, CONSTRAINT y CHECK a algunos atributos que se dedujeron que debían existir por las exploraciones, estas se pueden visualizar en el script de limpieza.
+
+Posteriormente, se pobló la tabla con los datos previamente almacenados en la tabla de jugadores del esquema raw con el comando INSERT.
+
+Para empezar la limpieza de los datos verificamos el número de nombres distintos que almacena la base de datos y encontramos que son 2551 nombres distintos, aunque estos se repiten por que un jugador puede jugar más de una temporada. Por cuestiones de limpieza se crearon dos nuevas columnas con el nombre de “apellido_jugador” y “nombre_jugador1” para separar el nombre de pila del jugador y su apellido y se les aplicó la función TRIM(). 
+
+Posteriormente se sustituyó la palabra “Undrafted” en anio_drafteo, ronda_drafteo y pick_dentro_de_ronda por null para poder así cambiar el tipo de dato de esos atributos a integer y la inconsistencia de la eficiencia de tiro, en el cual aparecían valores mayores a 1, se corrigió. Además se sustituyó la abreviación “USA” en país_nacimiento por “United States of America” ya que los demás países no estaban abreviados. 
+
+Por último se aplicó la función Trim() a todos los atributos de tipo texto.
+
+
 
 
 
