@@ -111,7 +111,7 @@ Por último, es importante notar que en la columna nombre_jugador los nombres de
 
 ## Limpieza
 
-[Ver script limpieza] ()
+[Ver script limpieza](https://github.com/leovice2004/Proyecto_Final_BaseDatos/blob/74e0482a45901908a82c72716a2747392683f70d/src/limpieza.sql)
 
 Para la limpieza se creó un nuevo esquema llamado limpieza:
 ```
