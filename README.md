@@ -155,7 +155,29 @@ Posteriormente se sustituyó la palabra “Undrafted” en anio_drafteo, ronda_d
 
 Por último se aplicó la función Trim() a todos los atributos de tipo texto.
 
+## Normalización
 
+Para la limpieza se creó un nuevo esquema llamado limpieza:
+```
+DROP SCHEMA IF EXISTS normalizacion;
+CREATE SCHEMA IF NOT EXISTS normalizacion;
+```
+Después de crear el esquema de normalización se buscaron dependencias funcionales y multivaluadas dada la naturaleza de los datos. En esta búsqueda se encontró que el diseño sólo contaba con dos dependencias funcionales las cuales son:
+
+(nombre_jugador)---------> (universidad, pais_nacimiento, anio_drafteo, ronda_drafteo, pick_dentro_ronda)
+(nombre, temporada)-------> (equipo, todas las estadísticas de una temporada)
+
+Como el diseño inicial no se encontraba en 4ta forma normal, se descompusieron los datos en las siguientes relvars con los siguientes atributos:
+
+| Relvar |  Atributos |
+| ------------- | -----------|
+| jugadores | id, nombre_jugador, universidad_id, pais_nacimiento_id, anio_drafteo, ronda_drafteo, pick_dentro_ronda|
+| estadisticas_jugador_temporada  | id, jugador_id, equipo_id, edad, esatura, peso, estadísticas_temporada, temporada|
+| equipos  | id, equipo|
+| pais_nacimiento  | id, pais_nacimiento|
+| universidades  | id, universidad|
+
+El diagrama entidad resultante, despues de la normalización es el siguiente:
 
 
 
