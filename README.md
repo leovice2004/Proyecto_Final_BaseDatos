@@ -149,7 +149,7 @@ También se agregaron restricciones NOT NULL, CONSTRAINT y CHECK a algunos atrib
 
 Posteriormente, se pobló la tabla con los datos previamente almacenados en la tabla de jugadores del esquema raw con el comando INSERT.
 
-Para empezar la limpieza de los datos verificamos el número de nombres distintos que almacena la base de datos y encontramos que son 2551 nombres distintos, aunque estos se repiten por que un jugador puede jugar más de una temporada. Por cuestiones de limpieza se crearon dos nuevas columnas con el nombre de “apellido_jugador” y “nombre_jugador1” para separar el nombre de pila del jugador y su apellido y se les aplicó la función TRIM(). 
+Para empezar la limpieza de los datos verificamos el número de nombres distintos que almacena la base de datos y encontramos que son 2551 nombres distintos, aunque estos se repiten por que un jugador puede jugar más de una temporada. 
 
 Posteriormente se sustituyó la palabra “Undrafted” en anio_drafteo, ronda_drafteo y pick_dentro_de_ronda por null para poder así cambiar el tipo de dato de esos atributos a integer y la inconsistencia de la eficiencia de tiro, en el cual aparecían valores mayores a 1, se corrigió. Además se sustituyó la abreviación “USA” en país_nacimiento por “United States of America” ya que los demás países no estaban abreviados. 
 
