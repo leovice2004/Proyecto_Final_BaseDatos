@@ -37,23 +37,6 @@ SELECT nombre_jugador
 FROM limpieza.jugadores
 GROUP BY nombre_jugador;
 
---Creamos nueva columna apellido 
-ALTER TABLE limpieza.jugadores ADD COLUMN apellido_jugador VARCHAR(100); 
-
---Poblamos columna apellido 
-UPDATE limpieza.jugadores SET apellido_jugador = TRIM(split_part(nombre_jugador, ' ', 2));
-
---Creamos nueva columna nombre 
-ALTER TABLE limpieza.jugadores ADD COLUMN nombre_jugador1 VARCHAR(100); 
-
---Poblamos columna nombre 
-UPDATE limpieza.jugadores SET nombre_jugador = TRIM(split_part(nombre_jugador, ' ', 1));
-
---Dropeamos columna de union de ambos
-ALTER TABLE limpieza.jugadores DROP COLUMN nombre_jugador;
-
---Cambiamos el nombre de columna nombre_jugador1 a nombre_jugador
-ALTER TABLE limpieza.jugadores RENAME COLUMN nombre_jugador1 TO nombre_jugador;
 
 --Cambiamos undrafted a null 
 UPDATE limpieza.jugadores SET anio_drafteo = NULL WHERE anio_drafteo='Undrafted';
@@ -88,7 +71,6 @@ UPDATE limpieza.jugadores set abreviacion_equipo = TRIM(abreviacion_equipo);
 UPDATE limpieza.jugadores set universidad = TRIM(universidad);
 UPDATE limpieza.jugadores set pais_nacimiento = TRIM(pais_nacimiento);
 UPDATE limpieza.jugadores set temporada = TRIM(temporada);
-UPDATE limpieza.jugadores set apellido_jugador= TRIM(apellido_jugador);
 UPDATE limpieza.jugadores set nombre_jugador = TRIM(nombre_jugador);
 
 
