@@ -157,6 +157,8 @@ Por último se aplicó la función Trim() a todos los atributos de tipo texto.
 
 ## Normalización
 
+[Ver script normalización](https://github.com/leovice2004/Proyecto_Final_BaseDatos/blob/main/src/normalizacion.sql)
+
 Para la limpieza se creó un nuevo esquema llamado limpieza:
 ```
 DROP SCHEMA IF EXISTS normalizacion;
@@ -183,6 +185,31 @@ El diagrama entidad resultante, despues de la normalización es el siguiente:
 
 ![e376e243-ea70-4bd6-acc3-97194ffda0af](https://github.com/user-attachments/assets/e0499ccd-529a-48fd-b4bd-402f7afd6b97)
 
+
+## Análisis de datos
+
+
+
+En el análisis de datos se obtivieron resultados muy interesantes para futuras proyecciones. Algunos de los datos obtenidos sirven para obtener estadísticas acerca de dónde vienen la mayoría de los jugadores respecto a su universidad de orígen o país de orígen. Por otro lado se obtuvieron los máximos anotadores de puntos desde 1996 hasta 2022, los mayores asistidores, los mayores reboteros, los jugadores con 0 puntos en su carrera, los jugadores con mayor cantidad de partidos jugados, los jugadores con mayor eficiencia de tiro que hayan jugado más de 20 partidos, el jugador más pesado, el mas delgado, el más alto, el más bajo, el más jóven, el más viejo etc. 
+
+| Búsqueda |  Resultados |
+| ------------- | -----------|
+| Universidades de dónde llegan más jugadores a la NBA | Los resultados encontrados arrojaron que la mayoría de jugadores que llegan a la NBA provienen de ninguna universidad con el 13%, seguido por Kentucky con el 3% y Duke con el 2%|
+| Páises de dónde vienen más jugadores  | Los resultado arrojaron que la mayoría de los jugadores que llegn a la NBA provienen de Estados Unidos con el 84%, seguido de Canadá con el 1.7% y Francia con el 1.45%|
+| Máximos anotadores | Los máximos anotadores de la NBA de 1996-2022 son LeBron James: 38648 pts, Kobe Bryant: 33633 pts y Dirk Nowitzky: 31561 pts|
+| Máximos asistidores  | Los máximos asistidores de la NBA de 1996-2022 son Chris Paul: 11508 ast, Jason Kidd: 10720 ast y LeBron James: 10415 ast|
+| Máximos reboteros  | Los máximos reboteros de la NBA de 1996-2022 son Tim Duncan: 15083 reb, Dwight Howard: 14623 reb y Kevin Garnett: 14145 reb|
+| Mayor cantidad de partidos  | Los jugadores con mayor cantidad de partidos de la NBA de 1996-2022 son Vince Carter: 1541 part, Dirk Nowitzky:1522 part y LeBron James:1421 part|
+| Mayor eficiencia de tiro  | El jugador con mayor eficiencia de tiro es Jericho Sims: 0.78|
+| Jugador más pesado  | Sim Bhullar: 163.3 kg|
+| Jugador más delgado  | Spud Webb: 60.3 kg|
+| Jugador más alto  | Gheorghe Muresan: 231.14 cm |
+| Jugador más bajo  | Muggsy Boges: 160.02 cm|
+| Jugador más viejo  | Kevin Willis: 44 años |
+| Jugador más jóven  | Kobe Bryant: 18 años|
+| Cantidad de jugadores con cero puntos en la NBA | 63 jugadores|
+
+Algunas gráfcas de los resultados son:
 
 
 
