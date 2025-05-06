@@ -177,7 +177,13 @@ Como el diseño inicial no se encontraba en 4ta forma normal, se descompusieron 
 | pais_nacimiento  | id, pais_nacimiento|
 | universidades  | id, universidad|
 
-El diagrama entidad resultante, despues de la normalización es el siguiente:
+Una vez descompuesto el diseño inicial, se puede verificar que la base de datos se encuentra en 4ta forma normal por que todas las dependencias funcionales encontradas estan implicadas por las llaves y el diseño es intuitivo, pues no presenta anomalías de inserción, modificación o de eliminación. 
+
+El diagrama entidad resultante, despues de la normalización es el siguiente: 
+
+![e376e243-ea70-4bd6-acc3-97194ffda0af](https://github.com/user-attachments/assets/e0499ccd-529a-48fd-b4bd-402f7afd6b97)
+
+
 
 
 
