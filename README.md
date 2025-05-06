@@ -188,7 +188,7 @@ El diagrama entidad resultante, despues de la normalización es el siguiente:
 
 ## Análisis de datos
 
-[Ver script análisis]()
+[Ver script análisis](https://github.com/leovice2004/Proyecto_Final_BaseDatos/blob/main/src/analisis.sql)
 
 En el análisis de datos se obtivieron resultados muy interesantes para futuras proyecciones. Algunos de los datos obtenidos sirven para obtener estadísticas acerca de dónde vienen la mayoría de los jugadores respecto a su universidad de orígen o país de orígen. Por otro lado se obtuvieron los máximos anotadores de puntos desde 1996 hasta 2022, los mayores asistidores, los mayores reboteros, los jugadores con 0 puntos en su carrera, los jugadores con mayor cantidad de partidos jugados, los jugadores con mayor eficiencia de tiro que hayan jugado más de 20 partidos, el jugador más pesado, el mas delgado, el más alto, el más bajo, el más jóven, el más viejo etc. 
 
