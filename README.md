@@ -210,6 +210,11 @@ En el análisis de datos se obtivieron resultados muy interesantes para futuras 
 | Cantidad de jugadores con cero puntos en la NBA | 63 jugadores|
 
 Algunas gráfcas de los resultados son:
+![094CC567-97B3-46A3-8188-B0F8ABEF2286](https://github.com/user-attachments/assets/62e0e964-92a0-4e75-bfab-6b46979930dc)
+
+![020BDE7C-F5A5-467B-819D-5241F75EAF0B](https://github.com/user-attachments/assets/ac210cb6-3048-467d-b750-f3c9b08fe873)
+
+
 
 
 
